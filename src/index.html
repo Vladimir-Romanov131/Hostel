@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Информационно-справочная система</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../css/Style.css" />
+    <script src="./skript.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="Panel ">
+        <div class="Logo link">
+          <a href="#" onclick="toggle.activate(document.getElementById('Home'))">
+            <img src="../img/Logo.png" width="80%" alt="Star" />
+          </a>
+          <p>Atlas Hotel</p>
+        </div>
+        <div class="link">
+          <a href="#" onclick="toggle.activate(document.getElementById('Reservation'))">
+            <img src="../img/icons8-reserve-100.png" width="80%" alt="Star" />
+          </a>
+          <p>Бронь</p>
+        </div>
+        <div class="link">
+          <a href="#" onclick="toggle.activate(document.getElementById('Calendar'))">
+            <img
+              src="../img/icons8-tear-off-calendar-100.png"
+              width="80%"
+              alt="Star"
+            />
+          </a>
+          <p>Календарь</p>
+        </div>
+        <div class="link">
+          <a href="#" onclick="toggle.activate(document.getElementById('Account'))">
+            <img src="../img/icons8-male-user-100.png" width="80%" alt="Star" />
+          </a>
+          <p>Аккаунт</p>
+        </div>
+        <div class="link">
+          <a href="#" onclick="toggle.activate(document.getElementById('Settings'))">
+            <img src="../img/icons8-settings-100.png" width="80%" alt="Star" />
+          </a>
+          <p>Параметры</p>
+        </div>
+      </div>
+      <div class="Main">
+        <div id="Home" style="display: none">
+          <div class="Maim-Home ">
+            <h1 class="MainFormStyle">
+              ДОБРО ПОЖАЛОВАТЬ <br />
+              В ОТЕЛЬ ATLAS DONETSK!
+            </h1>
+          </div>
+          <div class="Block">
+            <div class="Main_intro">
+              <div class="Room-Position">
+                <div class="Block">
+  
+                  <img class="img_intro" src="../img/t632ks7rNd8.jpg" width="40%" alt="Atlas">
+                  <p>
+                    <b>Атлас Донецк </b> – отель, который соответствует всем
+                    международным стандартам и предлагающий
+                    <b>
+                      полный набор услуг для полноценного отдыха и эффективной
+                      работы:
+                    </b>
+                    165 комфортабельных номеров, рестораны, в том числе открытая
+                    терраса, лаунж бар, спа и фитнес комплекс с бассейном, салон
+                    красоты, комнаты переговоров, конференц и банкетные залы.
+                  </p>
+                </div>     
+                <p class="clear">
+                  Отель находится на живописной набережной р. Кальмиус, в
+                  центральной части города, вблизи от стадиона<b
+                    >"Донбасс Арена"
+                  </b>
+                  , ледовой арены <b>"Дружба" </b> , офисов крупнейших компаний
+                  Донецка, а также развитой сети городского транспорта. Не все
+                  отели Донецка имеют такое удобное расположение как Атлас,
+                  которое идеально подходит для отдыха и деловых встреч.
+                </p>
+                <p>
+                  Наши номера оборудованы согласно всем современным требованиям.
+                  Выдержанные тона интерьера, комфортабельная кровать, удобное
+                  рабочее место, бесплатный Wi-Fi, превосходный душ обеспечат Вам
+                  максимально комфортное проживание в Донецке.
+                </p>
+                <p>
+                  Мы гордимся отзывами, которые оставляют о нашем комплексе гости,
+                  и всегда оперативно реагируем на все пожелания и предложения.
+                  <b
+                    >По итогам 2013 года отель Атлас вошел в 20 лучших отелей
+                    Украины согласно рейтингу сайта TripAdvisor.
+                  </b>
+                </p>
+                <p>
+                  <b>
+                    Atlas Fitness&Spa был отмечен премией Best Hotel Spa
+                    национальной премии Украины Hospitality Awards 2013.
+                  </b>
+                </p>
+                <p>К Вашим услугам:
+                  <ul>
+                    <li>
+                      165 номеров различных категорий
+                    </li>
+                    <li>
+                      3-х этажный велнес комплекс Atlas Fitness&Spa
+                    </li>
+                    <li>
+                      конференц и банкетные залы
+                    </li>
+                    <li>
+                      2 комнаты переговоров
+                    </li>
+                    <li>
+                      бизнес-центр (круглосуточно)
+                    </li>
+                    <li>
+                      рестораны: Атлас, Атлас Терраса, караоке - зал
+                    </li>
+                    <li>
+                      лобби и лаунж-бар Пьеро
+                    </li>
+                    <li>
+                      рум-сервис (круглосуточно)
+                    </li>
+                    <li>
+                      высокоскоростной бесплатный Wi-Fi на всей территории отеля
+                    </li>
+                    <li>
+                      детская комната с воспитателями 
+                    </li>
+                    <li>
+                      бесплатная парковка возле гостиницы 
+                    </li>
+                  </ul>
+                  <p>
+                    <b>
+                      Мы с нетерпением ждем Вас! 
+                    </b>
+                  </p>
+                </p>
+              </div>
+              </div>
+          </div>
+        </div>
+        <div id="Reservation" style="display: none">
+          <div class="Maim-Home">
+            <div class="MainFormStyle">
+              <h1>Бронирование Номера</h1>
+            </div>
+          </div>
+          <div class="Block">
+            <div class="Main_intro"> 
+              <div class="Block Room-Block">
+                <div class="Room-Position">
+                  <a href="">
+                    <div >
+                      <div class="Room_Block">
+                        <img src="../img/Reservation/Classic.png" width="100%" alt="Номер Classic">
+                        <div class="Reservation_txt">
+                          <p>Номер Classic </p>
+                          <p>4500 RUB</p>
+                        </div>
+                        <div class="Icon">
+                          <img src="../img/Reservation/Icons/icons8-wi-fi-26.png" alt="">
+                          <img src="../img/Reservation/Icons/icons8-two-beds-26.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="Room-Position">
+                  <a href="">
+                    <div>
+                      <div class="Room_Block">
+                        <img src="../img/Reservation/Twin.png" width="100%" alt="Номер Twin">
+                        <div class="Reservation_txt">
+                          <p>Номер Twin</p>
+                          <p>6000 RUB</p>
+                        </div>
+                        <div class="Icon">
+                          <img src="../img/Reservation/Icons/icons8-wi-fi-26.png" alt="">
+                          <img src="../img/Reservation/Icons/icons8-two-beds-26.png" alt="">
+                        </div>   
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="Room-Position">
+                  <a href="">
+                    <div>
+                      <div class="Room_Block">
+                        <img src="../img/Reservation/King.png" width="100%" alt="Номер King">
+                        <div class="Reservation_txt">
+                          <p>Номер King</p>
+                          <p>5500 RUB</p>
+                        </div>
+                        <div class="Icon">
+                          <img src="../img/Reservation/Icons/icons8-wi-fi-26.png" alt="">
+                          <img src="../img/Reservation/Icons/icons8-two-beds-26.png" alt="">
+                          <img src="../img/Reservation/Icons/icons8-dumbbells-26.png" alt="">
+                          <img src="../img/Reservation/Icons/icons8-swimming-26.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="Room-Position">
+                  <a href="">
+                    <div>
+                      <div class="Room_Block">
+                        <img src="../img/Reservation/BS.png" width="100%" alt="Номер Business-Suite">
+                        <div class="Reservation_txt">
+                          <p>Номер Business-Suite </p>
+                          <p>7000 RUB</p>
+                        </div>
+                        <div class="Icon">
+                          <img src="../img/Reservation/Icons/icons8-wi-fi-26.png" alt="">
+                          <img src="../img/Reservation/Icons/icons8-two-beds-26.png" alt="">
+                          <img src="../img/Reservation/Icons/icons8-dumbbells-26.png" alt="">
+                          <img src="../img/Reservation/Icons/icons8-swimming-26.png" alt="">
+                          <img src="../img/Reservation/Icons/icons8-30-26.png" alt="">
+                        </div>                   
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="Room-Position">
+                  <a href="">
+                    <div >
+                        <div class="Room_Block Room_style">
+                          <img src="../img/Reservation/S.png" width="100%" alt="Номер Suite">
+                          <div class="Reservation_txt">
+                            <p>Номер Suite</p>
+                            <p>9000 RUB</p>
+                          </div>
+                          <div class="Icon">
+                            <img src="../img/Reservation/Icons/icons8-wi-fi-26.png" alt="">
+                            <img src="../img/Reservation/Icons/icons8-two-beds-26.png" alt="">
+                            <img src="../img/Reservation/Icons/icons8-dumbbells-26.png" alt="">
+                            <img src="../img/Reservation/Icons/icons8-swimming-26.png" alt="">
+                            <img src="../img/Reservation/Icons/icons8-60-26.png" alt="">
+                          </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="Calendar" style="display: none">
+          <p>Календарь</p>
+        </div>
+        <div id="Account" style="display: none">  
+          <div id="Login">
+            <div class="Maim-Home" >
+              <div class="MainFormStyle">
+                <h1>Регистрация</h1> 
+              </div>
+            </div>
+            <div class="Block">
+              <div class="Main_intro--setting Block">
+                <div>
+                  <form action="/register" method="POST">
+                    <div>
+                      <label for="username">Имя пользователя:</label>
+                      <input type="text" id="username" name="username" required />
+                    </div>
+                    <div>
+                      <label for="password">Пароль:</label>
+                      <input type="password" id="password" name="password" required />
+                    </div>
+                    <div>
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" required />
+                    </div>
+                    <button type="submit">Зарегистрироваться</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="Maim-Home" >
+              <div>
+                <p>Вы еще не вошли в систему*</p>
+              </div>
+            </div>
+          </div>
+          <div id="profile" style="display:none">
+            <p>
+              вход
+            </p>
+          </div>
+        </div>
+        <div id="Settings" style="display: none">
+          <div class="Maim-Home" >
+            <div class="MainFormStyle">
+              <h3>Настройки</h3> 
+            </div>
+          </div>
+          <div class="Block">
+            <div class="Main_intro--setting">
+              <div class="Maim-Home">
+                <img src="../img/icons8-male-user-100.png" alt="">
+              </div>
+              <div class="Block">
+
+                <p>Фамилия</p>
+                <p>
+                  Имя
+                </p>
+                <p>
+                  Отчество
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
