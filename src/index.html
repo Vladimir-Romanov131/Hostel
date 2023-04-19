@@ -10,20 +10,20 @@
   </head>
   <body>
     <main>
-      <div class="Panel ">
-        <div class="Logo link">
+      <div id="PanelStyle" class="Panel PanelStyle ">
+        <div id="Panel-Link" class="Logo link">
           <a href="#" onclick="toggle.activate(document.getElementById('Home'))">
             <img src="../img/Logo.png" width="80%" alt="Star" />
           </a>
           <p>Atlas Hotel</p>
         </div>
-        <div class="link">
+        <div id="Panel-Link" class="link">
           <a href="#" onclick="toggle.activate(document.getElementById('Reservation'))">
             <img src="../img/icons8-reserve-100.png" width="80%" alt="Star" />
           </a>
           <p>Бронь</p>
         </div>
-        <div class="link">
+        <div id="Panel-Link" class="link">
           <a href="#" onclick="toggle.activate(document.getElementById('Calendar'))">
             <img
               src="../img/icons8-tear-off-calendar-100.png"
@@ -33,20 +33,20 @@
           </a>
           <p>Календарь</p>
         </div>
-        <div class="link">
+        <div id="Panel-Link" class="link">
           <a href="#" onclick="toggle.activate(document.getElementById('Account'))">
             <img src="../img/icons8-male-user-100.png" width="80%" alt="Star" />
           </a>
           <p>Аккаунт</p>
         </div>
-        <div class="link">
+        <div id="Panel-Link" class="link">
           <a href="#" onclick="toggle.activate(document.getElementById('Settings'))">
             <img src="../img/icons8-settings-100.png" width="80%" alt="Star" />
           </a>
           <p>Параметры</p>
         </div>
       </div>
-      <div class="Main">
+      <div id="MainBackground" class="Main MainBackground">
         <div id="Home" style="display: none">
           <div class="Maim-Home ">
             <h1 class="MainFormStyle">
@@ -55,11 +55,11 @@
             </h1>
           </div>
           <div class="Block">
-            <div class="Main_intro">
+            <div class="MainIntro-size MainIntro-shadow">
               <div class="Room-Position">
                 <div class="Block">
   
-                  <img class="img_intro" src="../img/t632ks7rNd8.jpg" width="40%" alt="Atlas">
+                  <img id="img-main" class="img_intro img_intro-shadow" src="../img/t632ks7rNd8.jpg" width="40%" alt="Atlas">
                   <p>
                     <b>Атлас Донецк </b> – отель, который соответствует всем
                     международным стандартам и предлагающий
@@ -274,14 +274,12 @@
                     <input type="email" id="email-input"><br>
                     <label for="phone-input">Phone:</label>
                     <input type="text" id="phone-input"><br>
-
                     <label for="password-input">password:</label>
                     <input type="password" id="password-input"><br>
                     <label for="confirm-password-input">confirm-password:</label>
                     <input type="password" id="confirm-password-input"><br>
                     <button type="button" id="save-button">Save</button>
                   </form>
-                  
                 </div>
               </div>
             </div>
@@ -300,22 +298,16 @@
         <div id="Settings" style="display: none">
           <div class="Maim-Home" >
             <div class="MainFormStyle">
-              <h3>Настройки</h3> 
+              <h1>Настройки</h1> 
             </div>
           </div>
           <div class="Block">
-            <div class="Main_intro--setting">
+            <div class="introSetting-size introSetting-shadow">
               <div class="Maim-Home">
-                <img src="../img/icons8-male-user-100.png" alt="">
+                
               </div>
               <div class="Block">
-                <p>Фамилия</p>
-                <p>
-                  Имя
-                </p>
-                <p>
-                  Отчество
-                </p>
+                <a href="#" onclick="changeClass()">Темная тема</a>
               </div>
             </div>
           </div>

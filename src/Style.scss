@@ -4,7 +4,9 @@ $gray: #bababa;
 $activ: #f5e901;
 $activ-post: #6f6a05;
 $Atlas: #ca043d;
+$Black: black;
 
+// Main стили
 .MainFormStyle {
   border-bottom: 2px solid black;
 }
@@ -14,27 +16,37 @@ $Atlas: #ca043d;
   width: 92%;
   height: auto;
   min-height: 1000px;
+}
+.MainBackground {
   background-color: $white;
 }
-.Main_intro--setting {
+.introSetting-size {
   width: 50%;
+}
+.introSetting-shadow {
   box-shadow: 3px 3px 20px #ca043d;
 }
+
 .Maim-Home {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.Main_intro {
+.MainIntro-size {
   width: 80%;
+}
+.MainIntro-shadow {
   box-shadow: 3px 3px 20px #ca043d;
 }
 .img_intro {
   margin: 1em;
+}
+.img_intro-shadow {
   box-shadow: 5px 4px 10px $Atlas;
 }
-// padding: 1em;
+
+// Стили отвечающие за панель
 .Panel {
   position: fixed;
   left: 0;
@@ -42,15 +54,21 @@ $Atlas: #ca043d;
   height: 100%;
   text-align: center;
   font-size: 90%;
+}
+.PanelStyle {
   border-right: 1px solid black;
   background-color: $white;
 }
-
+// Стили Линков панели
 .Logo {
   padding-top: 10%;
   display: block;
 }
 .link {
+  background-color: $white;
+  text-decoration: none;
+}
+.link-black {
   background-color: $white;
   text-decoration: none;
 }
@@ -62,6 +80,7 @@ $Atlas: #ca043d;
 .clear {
   clear: left;
 }
+// Стили блока бронирования
 .Room-Block {
   display: flex;
   flex-wrap: wrap;
@@ -99,4 +118,22 @@ $Atlas: #ca043d;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+// темная тема
+.img_intro-shadowBlack {
+  box-shadow: 5px 4px 10px black;
+}
+.MainBackground-black {
+  background-color: $Black;
+}
+.PanelStyle-black {
+  border-right: 1px solid $Black;
+  background-color: $Black;
+}
+.TextColor {
+  color: $white;
+}
+.link-black {
+  background-color: $Black;
+  text-decoration: none;
 }
