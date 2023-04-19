@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="../css/Style.css" />
     <script src="./skript.js"></script>
+    <script src="./bundle.js"></script>
   </head>
   <body>
     <main>
@@ -265,22 +266,22 @@
             </div>
             <div class="Block">
               <div class="Main_intro--setting Block">
-                <div>
-                  <form action="/register" method="POST">
-                    <div>
-                      <label for="username">Имя пользователя:</label>
-                      <input type="text" id="username" name="username" required />
-                    </div>
-                    <div>
-                      <label for="password">Пароль:</label>
-                      <input type="password" id="password" name="password" required />
-                    </div>
-                    <div>
-                      <label for="email">Email:</label>
-                      <input type="email" id="email" name="email" required />
-                    </div>
-                    <button type="submit">Зарегистрироваться</button>
+                <div>   
+                  <form>
+                    <label for="name-input">Name:</label>
+                    <input type="text" id="name-input"><br>
+                    <label for="email-input">Email:</label>
+                    <input type="email" id="email-input"><br>
+                    <label for="phone-input">Phone:</label>
+                    <input type="text" id="phone-input"><br>
+
+                    <label for="password-input">password:</label>
+                    <input type="password" id="password-input"><br>
+                    <label for="confirm-password-input">confirm-password:</label>
+                    <input type="password" id="confirm-password-input"><br>
+                    <button type="button" id="save-button">Save</button>
                   </form>
+                  
                 </div>
               </div>
             </div>
@@ -308,7 +309,6 @@
                 <img src="../img/icons8-male-user-100.png" alt="">
               </div>
               <div class="Block">
-
                 <p>Фамилия</p>
                 <p>
                   Имя
@@ -323,4 +323,5 @@
       </div>
     </main>
   </body>
+
 </html>

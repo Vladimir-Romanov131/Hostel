@@ -1,6 +1,10 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, ipcMain, contextBridge } = require("electron");
 const path = require("path");
+ipcMain.handle("get-app-path", (event) => {
+  return app.getPath("userData");
+});
 // ...........................................................................................
+
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require("electron-squirrel-startup")) {
   app.quit();
@@ -13,10 +17,9 @@ const createWindow = () => {
     height: 720,
     resizable: false, // запретить изменение размера окна
     webPreferences: {
-      preload: path.join(__dirname, "preload.js"),
-      nodeIntegration: true,
+      nodeIntegration: false,
       contextIsolation: true,
-      enableRemoteModule: false,
+      preload: path.join(__dirname, "preload.js"),
     },
   });
   // hhj

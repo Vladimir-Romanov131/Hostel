@@ -16,7 +16,7 @@ const toggle = new Toggle();
 // проверка на наличие аккаунта
 class FileChecker {
   constructor(fileName, loginDivId, profileDivId) {
-    this.fileName = fileName;
+    this.fileName = "../account/data.json";
     this.loginDivId = loginDivId;
     this.profileDivId = profileDivId;
   }
