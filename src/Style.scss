@@ -4,8 +4,8 @@ $gray: #bababa;
 $activ: #f5e901;
 $activ-post: #6f6a05;
 $Atlas: #ca043d;
-$Black: black;
-
+$Black: #0e1621;
+$Black_: #17212b;
 // Main стили
 .MainFormStyle {
   border-bottom: 2px solid black;
@@ -121,19 +121,26 @@ $Black: black;
 }
 // темная тема
 .img_intro-shadowBlack {
-  box-shadow: 5px 4px 10px black;
+  box-shadow: 5px 4px 10px $Atlas;
 }
 .MainBackground-black {
   background-color: $Black;
 }
 .PanelStyle-black {
-  border-right: 1px solid $Black;
-  background-color: $Black;
+  background-color: $Black_;
+}
+.Panel-black {
+  position: fixed;
+  left: 0;
+  width: 8%;
+  height: 100%;
+  text-align: center;
+  font-size: 90%;
 }
 .TextColor {
   color: $white;
 }
 .link-black {
-  background-color: $Black;
+  background-color: $Black_;
   text-decoration: none;
 }

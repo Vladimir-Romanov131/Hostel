@@ -42,13 +42,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
   checker.checkFile();
 });
 //
-function changeClass() {
+function Dark() {
   const imgMain = document.getElementById("img-main");
   const DivMain = document.getElementById("MainBackground");
   const DivPanel = document.getElementById("PanelStyle");
   const DivLinck = document.querySelectorAll("#Panel-Link");
   const allParagraphs = document.querySelectorAll("p");
   const allTitle = document.querySelectorAll("h1");
+  const Li = document.querySelectorAll("li");
   imgMain.classList.remove("img_intro-shadow");
   imgMain.classList.add("img_intro-shadowBlack");
 
@@ -57,6 +58,8 @@ function changeClass() {
 
   DivPanel.classList.remove("PanelStyle");
   DivPanel.classList.add("PanelStyle-black");
+  DivPanel.classList.remove("Panel");
+  DivPanel.classList.add("Panel-black");
 
   allParagraphs.forEach(function (paragraph) {
     paragraph.style.color = "white";
@@ -67,5 +70,42 @@ function changeClass() {
 
   DivLinck.forEach(function (DivLinck) {
     DivLinck.classList.replace("link", "link-black");
+  });
+  Li.forEach(function (Li) {
+    Li.style.color = "white";
+  });
+}
+function Light() {
+  const imgMain = document.getElementById("img-main");
+  const DivMain = document.getElementById("MainBackground");
+  const DivPanel = document.getElementById("PanelStyle");
+  const DivLinck = document.querySelectorAll("#Panel-Link");
+  const allParagraphs = document.querySelectorAll("p");
+  const allTitle = document.querySelectorAll("h1");
+  const Li = document.querySelectorAll("li");
+  imgMain.classList.remove("img_intro-shadowBlack");
+  imgMain.classList.add("img_intro-shadow");
+
+  DivMain.classList.remove("MainBackground-black");
+  DivMain.classList.add("MainBackground");
+
+  DivPanel.classList.remove("PanelStyle-black");
+  DivPanel.classList.add("PanelStyle");
+
+  DivPanel.classList.remove("Panel-black");
+  DivPanel.classList.add("Panel");
+
+  allParagraphs.forEach(function (paragraph) {
+    paragraph.style.color = "black";
+  });
+  allTitle.forEach(function (allTitle) {
+    allTitle.style.color = "black";
+  });
+
+  DivLinck.forEach(function (DivLinck) {
+    DivLinck.classList.replace("link-black", "link");
+  });
+  Li.forEach(function (Li) {
+    Li.style.color = "black";
   });
 }
