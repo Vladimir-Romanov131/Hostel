@@ -6,6 +6,13 @@ $activ-post: #6f6a05;
 $Atlas: #ca043d;
 $Black: #0e1621;
 $Black_: #17212b;
+$Green: #049500;
+$Milk: #a7dea5;
+$Green_: #1de60b99;
+$Green__: #12b618f7;
+$Gray: #c9b5f0;
+$Purple: #b74cd9;
+$Purple_: #b33cbb;
 // Main стили
 .MainFormStyle {
   border-bottom: 2px solid black;
@@ -72,10 +79,6 @@ $Black_: #17212b;
   display: block;
 }
 .link {
-  background-color: $white;
-  text-decoration: none;
-}
-.link-black {
   background-color: $white;
   text-decoration: none;
 }
@@ -161,6 +164,68 @@ $Black_: #17212b;
   color: $white;
 }
 .link-black {
-  background-color: $Black_;
+  background-color: none;
+  text-decoration: none;
+}
+// Зеленая тема
+.img_intro-shadowGreen {
+  box-shadow: 5px 4px 10px $Atlas;
+}
+.MainBackground-green {
+  background: linear-gradient(45deg, $Green, $Milk);
+}
+.PanelStyle-green {
+  background: linear-gradient(180deg, $Green_, $Green__);
+}
+.Panel-green {
+  position: fixed;
+  left: 0;
+  width: 8.2%;
+  height: 100%;
+  text-align: center;
+  font-size: 90%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.Panel-green::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+.TextColor {
+  color: $Black;
+}
+.link-green {
+  background-color: none;
+  text-decoration: none;
+}
+// Фиолетовая тема
+.img_intro-shadowPurple {
+  box-shadow: 5px 4px 10px $Atlas;
+}
+.MainBackground-purple {
+  background: linear-gradient(45deg, $Purple, $Gray);
+}
+.PanelStyle-purple {
+  background-color: $Purple_;
+}
+.Panel-purple {
+  position: fixed;
+  left: 0;
+  width: 8.2%;
+  height: 100%;
+  text-align: center;
+  font-size: 90%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.Panel-purple::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+.TextColor {
+  color: $Black;
+}
+.link-purple {
+  background-color: none;
   text-decoration: none;
 }

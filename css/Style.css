@@ -77,11 +77,6 @@
   text-decoration: none;
 }
 
-.link-black {
-  background-color: #ffffff;
-  text-decoration: none;
-}
-
 .link:hover {
   background-color: #ca043d;
   color: #ffffff;
@@ -176,6 +171,80 @@
 }
 
 .link-black {
-  background-color: #17212b;
+  background-color: none;
+  text-decoration: none;
+}
+
+.img_intro-shadowGreen {
+  box-shadow: 5px 4px 10px #ca043d;
+}
+
+.MainBackground-green {
+  background: linear-gradient(45deg, #049500, #a7dea5);
+}
+
+.PanelStyle-green {
+  background: linear-gradient(180deg, rgba(29, 230, 11, 0.6), rgba(18, 182, 24, 0.968627451));
+}
+
+.Panel-green {
+  position: fixed;
+  left: 0;
+  width: 8.2%;
+  height: 100%;
+  text-align: center;
+  font-size: 90%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.Panel-green::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.TextColor {
+  color: #0e1621;
+}
+
+.link-green {
+  background-color: none;
+  text-decoration: none;
+}
+
+.img_intro-shadowPurple {
+  box-shadow: 5px 4px 10px #ca043d;
+}
+
+.MainBackground-purple {
+  background: linear-gradient(45deg, #b74cd9, #c9b5f0);
+}
+
+.PanelStyle-purple {
+  background-color: #b33cbb;
+}
+
+.Panel-purple {
+  position: fixed;
+  left: 0;
+  width: 8.2%;
+  height: 100%;
+  text-align: center;
+  font-size: 90%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.Panel-purple::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.TextColor {
+  color: #0e1621;
+}
+
+.link-purple {
+  background-color: none;
   text-decoration: none;
 }

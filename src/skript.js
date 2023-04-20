@@ -52,17 +52,28 @@ document.addEventListener("DOMContentLoaded", () => {
       this.allParagraphs = document.querySelectorAll("p");
       this.allTitle = document.querySelectorAll("h1");
       this.Li = document.querySelectorAll("li");
+      this.Label = document.querySelectorAll("label");
+      this.Span = document.querySelectorAll("span");
     }
     setDarkMode() {
+      this.imgMain.classList.remove("img_intro-Purple");
+      this.imgMain.classList.remove("img_intro-Green");
       this.imgMain.classList.remove("img_intro-shadow");
       this.imgMain.classList.add("img_intro-shadowBlack");
 
       this.DivMain.classList.remove("MainBackground");
+      this.DivMain.classList.remove("MainBackground-puple");
+      this.DivMain.classList.remove("MainBackground-green");
       this.DivMain.classList.add("MainBackground-black");
 
       this.DivPanel.classList.remove("PanelStyle");
+      this.DivPanel.classList.remove("PanelStyle-purple");
+      this.DivPanel.classList.remove("PanelStyle-green");
       this.DivPanel.classList.add("PanelStyle-black");
+
       this.DivPanel.classList.remove("Panel");
+      this.DivPanel.classList.remove("Panel-purple");
+      this.DivPanel.classList.remove("Panel-green");
       this.DivPanel.classList.add("Panel-black");
 
       this.allParagraphs.forEach(function (paragraph) {
@@ -70,6 +81,12 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       this.allTitle.forEach(function (allTitle) {
         allTitle.style.color = "white";
+      });
+      this.Label.forEach(function (Label) {
+        Label.style.color = "white";
+      });
+      this.Span.forEach(function (Span) {
+        Span.style.color = "white";
       });
 
       this.DivLinck.forEach(function (DivLinck) {
@@ -100,16 +117,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     setLightMode() {
+      this.imgMain.classList.remove("img_intro-Purple");
+      this.imgMain.classList.remove("img_intro-Green");
       this.imgMain.classList.remove("img_intro-shadowBlack");
       this.imgMain.classList.add("img_intro-shadow");
 
       this.DivMain.classList.remove("MainBackground-black");
+      this.DivMain.classList.remove("MainBackground-puple");
+      this.DivMain.classList.remove("MainBackground-green");
       this.DivMain.classList.add("MainBackground");
 
       this.DivPanel.classList.remove("PanelStyle-black");
+      this.DivPanel.classList.remove("PanelStyle-purple");
+      this.DivPanel.classList.remove("PanelStyle-green");
       this.DivPanel.classList.add("PanelStyle");
 
       this.DivPanel.classList.remove("Panel-black");
+      this.DivPanel.classList.remove("Panel-purple");
+      this.DivPanel.classList.remove("Panel-green");
       this.DivPanel.classList.add("Panel");
 
       this.allParagraphs.forEach(function (paragraph) {
@@ -131,7 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const lightMode = new LightMode();
-
   document.querySelector("#btn-light-mode").addEventListener("click", () => {
     lightMode.setLightMode();
   });
@@ -160,4 +184,127 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Ошибка загрузки файла data.json", error);
     });
 });
-//..........................................................................................................
+//Зеленая тема..........................................................................................................
+document.addEventListener("DOMContentLoaded", () => {
+  class GreenMode {
+    constructor() {
+      this.imgMain = document.getElementById("img-main");
+      this.DivMain = document.getElementById("MainBackground");
+      this.DivPanel = document.getElementById("PanelStyle");
+      this.DivLinck = document.querySelectorAll("#Panel-Link");
+      this.allParagraphs = document.querySelectorAll("p");
+      this.allTitle = document.querySelectorAll("h1");
+      this.Li = document.querySelectorAll("li");
+      this.Label = document.querySelectorAll("label");
+      this.Span = document.querySelectorAll("span");
+    }
+    setGreenMode() {
+      this.imgMain.classList.remove("img_intro-Purple");
+      this.imgMain.classList.remove("img_intro-shadow");
+      this.imgMain.classList.remove("img_intro-shadowBlack");
+      this.imgMain.classList.add("img_intro-Green");
+
+      this.DivMain.classList.remove("MainBackground-black");
+      this.DivMain.classList.remove("MainBackground-puple");
+      this.DivMain.classList.remove("MainBackground");
+      this.DivMain.classList.add("MainBackground-green");
+
+      this.DivPanel.classList.remove("PanelStyle-black");
+      this.DivPanel.classList.remove("PanelStyle-purple");
+      this.DivPanel.classList.remove("PanelStyle");
+      this.DivPanel.classList.add("PanelStyle-green");
+
+      this.DivPanel.classList.remove("Panel-black");
+      this.DivPanel.classList.remove("Panel-purple");
+      this.DivPanel.classList.remove("Panel");
+      this.DivPanel.classList.add("Panel-green");
+
+      this.allParagraphs.forEach(function (paragraph) {
+        paragraph.style.color = "black";
+      });
+      this.allTitle.forEach(function (allTitle) {
+        allTitle.style.color = "black";
+      });
+      this.Label.forEach(function (Label) {
+        Label.style.color = "black";
+      });
+      this.Span.forEach(function (Span) {
+        Span.style.color = "black";
+      });
+
+      this.DivLinck.forEach(function (DivLinck) {
+        DivLinck.classList.replace("link", "link-green");
+      });
+
+      this.Li.forEach(function (Li) {
+        Li.style.color = "black";
+      });
+    }
+  }
+  const greenMode = new GreenMode();
+  document.querySelector("#btn-green-mode").addEventListener("click", () => {
+    greenMode.setGreenMode();
+  });
+});
+//Фиолетовый тема..........................................................................................................
+document.addEventListener("DOMContentLoaded", () => {
+  class PurpleMode {
+    constructor() {
+      this.imgMain = document.getElementById("img-main");
+      this.DivMain = document.getElementById("MainBackground");
+      this.DivPanel = document.getElementById("PanelStyle");
+      this.DivLinck = document.querySelectorAll("#Panel-Link");
+      this.allParagraphs = document.querySelectorAll("p");
+      this.allTitle = document.querySelectorAll("h1");
+      this.Li = document.querySelectorAll("li");
+      this.Label = document.querySelectorAll("label");
+      this.Span = document.querySelectorAll("span");
+    }
+    setPurpleMode() {
+      this.imgMain.classList.remove("img_intro-Green");
+      this.imgMain.classList.remove("img_intro-shadow");
+      this.imgMain.classList.remove("img_intro-shadowBlack");
+      this.imgMain.classList.add("img_intro-Purple");
+
+      this.DivMain.classList.remove("MainBackground-black");
+      this.DivMain.classList.remove("MainBackground-green");
+      this.DivMain.classList.remove("MainBackground");
+      this.DivMain.classList.add("MainBackground-puple");
+
+      this.DivPanel.classList.remove("PanelStyle-black");
+      this.DivPanel.classList.remove("PanelStyle-green");
+      this.DivPanel.classList.remove("PanelStyle");
+      this.DivPanel.classList.add("PanelStyle-purple");
+
+      this.DivPanel.classList.remove("Panel-black");
+      this.DivPanel.classList.remove("Panel-green");
+      this.DivPanel.classList.remove("Panel");
+      this.DivPanel.classList.add("Panel-purple");
+
+      this.allParagraphs.forEach(function (paragraph) {
+        paragraph.style.color = "black";
+      });
+      this.allTitle.forEach(function (allTitle) {
+        allTitle.style.color = "black";
+      });
+      this.Label.forEach(function (Label) {
+        Label.style.color = "black";
+      });
+      this.Span.forEach(function (Span) {
+        Span.style.color = "black";
+      });
+
+      this.DivLinck.forEach(function (DivLinck) {
+        DivLinck.classList.replace("link", "link-purple");
+      });
+
+      this.Li.forEach(function (Li) {
+        Li.style.color = "black";
+      });
+    }
+  }
+  const purpleMode = new PurpleMode();
+  document.querySelector("#btn-purple-mode").addEventListener("click", () => {
+    purpleMode.setPurpleMode();
+  });
+});
