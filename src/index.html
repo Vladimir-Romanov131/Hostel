@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <title>Информационно-справочная система</title>
@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/Style.css" />
     <script src="./skript.js"></script>
     <script src="./bundle.js"></script>
+    <script src="./Textsize.js"></script>
   </head>
   <body>
     <main>
@@ -72,7 +73,7 @@
                     красоты, комнаты переговоров, конференц и банкетные залы.
                   </p>
                 </div>     
-                <p class="clear">
+                <p>
                   Отель находится на живописной набережной р. Кальмиус, в
                   центральной части города, вблизи от стадиона<b
                     >"Донбасс Арена"
@@ -290,9 +291,6 @@
             </div>
           </div>
           <div id="profile" style="display:none">
-            <p>
-              вход
-            </p>
           </div>
         </div>
         <div id="Settings" style="display: none">
@@ -306,14 +304,28 @@
               <div class="Maim-Home">
                 <p>Сменить Цветовую тему приложения:</p>
               </div>
-              <div class="Block">
-                <div>
-                  <p>Темная тема</p>
-                  <a href="#" onclick="Dark()"><img src="../img/Setting/Dark.png" width="30%" alt=""></a>
+              <div class=" Block">
+                <div class="Setting-Block">
+                  <a href="#" id="btn-dark-mode"><img src="../img/Setting/Dark.png" width="30%" alt=""><p>Темная тема</p></a>  
                 </div>
-                <div>
-                  <p>Светлая тема</p>
-                  <a href="#" onclick="Light()"><img src="../img/Setting/Light.png" width="30%" alt=""></a>
+                <div class="Setting-Block">
+                  <a href="#" id="btn-light-mode"><img src="../img/Setting/Light.png" width="30%" alt=""><p>Светлая тема</p></a>
+                </div>
+                <div class="Setting-Block">
+                  <a href="#" onclick="Light()"><img src="../img/Setting/Light.png" width="30%" alt=""><p>Светлая тема</p></a>
+                </div>
+              </div>
+              <div class="Maim-Home">
+                <p>Размер текста:</p>
+              </div>
+              <div class=" Block">
+                <div class="Setting-Block">
+                  <div>
+                    <label for="fontsize">Размер шрифта:</label>
+                    <span id="fontsize-value">16</span>
+                    <button id="fontsize-decrease">-</button>
+                    <button id="fontsize-increase">+</button>
+                  </div>
                 </div>
               </div>
             </div>

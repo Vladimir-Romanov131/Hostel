@@ -12,10 +12,11 @@ $Black_: #17212b;
 }
 .Main {
   position: absolute;
-  left: 8%;
-  width: 92%;
+  left: 8.2%;
+  width: 91.8%;
   height: auto;
   min-height: 1000px;
+  overflow-x: hidden;
 }
 .MainBackground {
   background-color: $white;
@@ -50,10 +51,16 @@ $Black_: #17212b;
 .Panel {
   position: fixed;
   left: 0;
-  width: 7.9%;
+  width: 8.1%;
   height: 100%;
   text-align: center;
   font-size: 90%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.Panel::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }
 .PanelStyle {
   border-right: 1px solid black;
@@ -119,6 +126,13 @@ $Black_: #17212b;
   justify-content: center;
   align-items: center;
 }
+// стили настроек
+.Setting-Block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 // темная тема
 .img_intro-shadowBlack {
   box-shadow: 5px 4px 10px $Atlas;
@@ -132,7 +146,7 @@ $Black_: #17212b;
 .Panel-black {
   position: fixed;
   left: 0;
-  width: 8%;
+  width: 8.2%;
   height: 100%;
   text-align: center;
   font-size: 90%;

@@ -26,7 +26,9 @@ const createWindow = () => {
 
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, "index.html"));
-
+  contextBridge.exposeInMainWorld("electron", {
+    readFileSync: fs.readFileSync,
+  });
   // mainWindow.setMenuBarVisibility(false); // убираем меню
   // Open the DevTools.
   // mainWindow.webContents.openDevTools(); // убираем окно разработчика при запуске программы

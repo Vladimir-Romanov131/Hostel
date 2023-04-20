@@ -1,4 +1,4 @@
-// // Скрипт работы меню, активация дивов и скрытие
+// // Скрипт работы меню, активация дивов и скрытие....................................................................................
 class Toggle {
   constructor() {
     this.currentActive = null;
@@ -13,7 +13,7 @@ class Toggle {
   }
 }
 const toggle = new Toggle();
-// проверка на наличие аккаунта
+// проверка на наличие аккаунта..........................................................................................................
 class FileChecker {
   constructor(fileName, loginDivId, profileDivId) {
     this.fileName = "../account/data.json";
@@ -41,71 +41,123 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const checker = new FileChecker("login.json", "Login", "profile");
   checker.checkFile();
 });
-//
-function Dark() {
-  const imgMain = document.getElementById("img-main");
-  const DivMain = document.getElementById("MainBackground");
-  const DivPanel = document.getElementById("PanelStyle");
-  const DivLinck = document.querySelectorAll("#Panel-Link");
-  const allParagraphs = document.querySelectorAll("p");
-  const allTitle = document.querySelectorAll("h1");
-  const Li = document.querySelectorAll("li");
-  imgMain.classList.remove("img_intro-shadow");
-  imgMain.classList.add("img_intro-shadowBlack");
+//темная тема..........................................................................................................
+document.addEventListener("DOMContentLoaded", () => {
+  class DarkMode {
+    constructor() {
+      this.imgMain = document.getElementById("img-main");
+      this.DivMain = document.getElementById("MainBackground");
+      this.DivPanel = document.getElementById("PanelStyle");
+      this.DivLinck = document.querySelectorAll("#Panel-Link");
+      this.allParagraphs = document.querySelectorAll("p");
+      this.allTitle = document.querySelectorAll("h1");
+      this.Li = document.querySelectorAll("li");
+    }
+    setDarkMode() {
+      this.imgMain.classList.remove("img_intro-shadow");
+      this.imgMain.classList.add("img_intro-shadowBlack");
 
-  DivMain.classList.remove("MainBackground");
-  DivMain.classList.add("MainBackground-black");
+      this.DivMain.classList.remove("MainBackground");
+      this.DivMain.classList.add("MainBackground-black");
 
-  DivPanel.classList.remove("PanelStyle");
-  DivPanel.classList.add("PanelStyle-black");
-  DivPanel.classList.remove("Panel");
-  DivPanel.classList.add("Panel-black");
+      this.DivPanel.classList.remove("PanelStyle");
+      this.DivPanel.classList.add("PanelStyle-black");
+      this.DivPanel.classList.remove("Panel");
+      this.DivPanel.classList.add("Panel-black");
 
-  allParagraphs.forEach(function (paragraph) {
-    paragraph.style.color = "white";
+      this.allParagraphs.forEach(function (paragraph) {
+        paragraph.style.color = "white";
+      });
+      this.allTitle.forEach(function (allTitle) {
+        allTitle.style.color = "white";
+      });
+
+      this.DivLinck.forEach(function (DivLinck) {
+        DivLinck.classList.replace("link", "link-black");
+      });
+
+      this.Li.forEach(function (Li) {
+        Li.style.color = "white";
+      });
+    }
+  }
+  const darkMode = new DarkMode();
+  document.querySelector("#btn-dark-mode").addEventListener("click", () => {
+    darkMode.setDarkMode();
   });
-  allTitle.forEach(function (allTitle) {
-    allTitle.style.color = "white";
-  });
+});
+// светлая тема..........................................................................................................
+document.addEventListener("DOMContentLoaded", () => {
+  class LightMode {
+    constructor() {
+      this.imgMain = document.getElementById("img-main");
+      this.DivMain = document.getElementById("MainBackground");
+      this.DivPanel = document.getElementById("PanelStyle");
+      this.DivLinck = document.querySelectorAll("#Panel-Link");
+      this.allParagraphs = document.querySelectorAll("p");
+      this.allTitle = document.querySelectorAll("h1");
+      this.Li = document.querySelectorAll("li");
+    }
 
-  DivLinck.forEach(function (DivLinck) {
-    DivLinck.classList.replace("link", "link-black");
-  });
-  Li.forEach(function (Li) {
-    Li.style.color = "white";
-  });
-}
-function Light() {
-  const imgMain = document.getElementById("img-main");
-  const DivMain = document.getElementById("MainBackground");
-  const DivPanel = document.getElementById("PanelStyle");
-  const DivLinck = document.querySelectorAll("#Panel-Link");
-  const allParagraphs = document.querySelectorAll("p");
-  const allTitle = document.querySelectorAll("h1");
-  const Li = document.querySelectorAll("li");
-  imgMain.classList.remove("img_intro-shadowBlack");
-  imgMain.classList.add("img_intro-shadow");
+    setLightMode() {
+      this.imgMain.classList.remove("img_intro-shadowBlack");
+      this.imgMain.classList.add("img_intro-shadow");
 
-  DivMain.classList.remove("MainBackground-black");
-  DivMain.classList.add("MainBackground");
+      this.DivMain.classList.remove("MainBackground-black");
+      this.DivMain.classList.add("MainBackground");
 
-  DivPanel.classList.remove("PanelStyle-black");
-  DivPanel.classList.add("PanelStyle");
+      this.DivPanel.classList.remove("PanelStyle-black");
+      this.DivPanel.classList.add("PanelStyle");
 
-  DivPanel.classList.remove("Panel-black");
-  DivPanel.classList.add("Panel");
+      this.DivPanel.classList.remove("Panel-black");
+      this.DivPanel.classList.add("Panel");
 
-  allParagraphs.forEach(function (paragraph) {
-    paragraph.style.color = "black";
-  });
-  allTitle.forEach(function (allTitle) {
-    allTitle.style.color = "black";
-  });
+      this.allParagraphs.forEach(function (paragraph) {
+        paragraph.style.color = "black";
+      });
 
-  DivLinck.forEach(function (DivLinck) {
-    DivLinck.classList.replace("link-black", "link");
+      this.allTitle.forEach(function (allTitle) {
+        allTitle.style.color = "black";
+      });
+
+      this.DivLinck.forEach(function (DivLinck) {
+        DivLinck.classList.replace("link-black", "link");
+      });
+
+      this.Li.forEach(function (Li) {
+        Li.style.color = "black";
+      });
+    }
+  }
+
+  const lightMode = new LightMode();
+
+  document.querySelector("#btn-light-mode").addEventListener("click", () => {
+    lightMode.setLightMode();
   });
-  Li.forEach(function (Li) {
-    Li.style.color = "black";
-  });
-}
+});
+//..........................................................................................................
+document.addEventListener("DOMContentLoaded", () => {
+  // Получаем ссылку на див #profile
+  const profileDiv = document.getElementById("profile");
+
+  // Загружаем файл data.json с помощью Fetch API
+  fetch("../account/data.json")
+    .then((response) => response.json())
+    .then((data) => {
+      // Создаем HTML-разметку для отображения информации из файла
+      const html = `
+        <p>Имя: ${data.name}</p>
+        <p>Email: ${data.email}</p>
+        <p>Телефон: ${data.phone}</p>
+      `;
+      // Вставляем созданную HTML-разметку в див #profile
+      profileDiv.innerHTML = html;
+      // Показываем див #profile
+      profileDiv.style.display = "block";
+    })
+    .catch((error) => {
+      console.error("Ошибка загрузки файла data.json", error);
+    });
+});
+//..........................................................................................................
