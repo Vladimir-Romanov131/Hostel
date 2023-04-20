@@ -20,12 +20,7 @@ class Toggle extends ToggleInterface {
 }
 const toggle = new Toggle();
 // проверка на наличие аккаунта..........................................................................................................
-class FileCheckerInterface {
-  checkFile() {
-    throw new Error("Метод checkFile не реализован");
-  }
-}
-class FileChecker extends FileCheckerInterface {
+class FileChecker {
   constructor(fileName, loginDivId, profileDivId) {
     this.fileName = "../account/data.json";
     this.loginDivId = loginDivId;
@@ -46,7 +41,6 @@ class FileChecker extends FileCheckerInterface {
       });
   }
 }
-
 // Ожидать загрузки страницы
 document.addEventListener("DOMContentLoaded", function (event) {
   const checker = new FileChecker("login.json", "Login", "profile");
