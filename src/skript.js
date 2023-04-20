@@ -4,8 +4,9 @@ class ToggleInterface {
     throw new Error("Метод activate не реализован");
   }
 }
-class Toggle {
+class Toggle extends ToggleInterface {
   constructor() {
+    super();
     this.currentActive = null;
   }
 
@@ -24,7 +25,7 @@ class FileCheckerInterface {
     throw new Error("Метод checkFile не реализован");
   }
 }
-class FileChecker {
+class FileChecker extends FileCheckerInterface {
   constructor(fileName, loginDivId, profileDivId) {
     this.fileName = "../account/data.json";
     this.loginDivId = loginDivId;
