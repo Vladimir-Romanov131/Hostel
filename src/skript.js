@@ -269,7 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
       this.DivMain.classList.remove("MainBackground-black");
       this.DivMain.classList.remove("MainBackground-green");
       this.DivMain.classList.remove("MainBackground");
-      this.DivMain.classList.add("MainBackground-puple");
+      this.DivMain.classList.add("MainBackground-purple");
 
       this.DivPanel.classList.remove("PanelStyle-black");
       this.DivPanel.classList.remove("PanelStyle-green");
