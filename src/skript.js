@@ -1,4 +1,9 @@
 // // Скрипт работы меню, активация дивов и скрытие....................................................................................
+class ToggleInterface {
+  activate(element) {
+    throw new Error("Метод activate не реализован");
+  }
+}
 class Toggle {
   constructor() {
     this.currentActive = null;
@@ -14,6 +19,11 @@ class Toggle {
 }
 const toggle = new Toggle();
 // проверка на наличие аккаунта..........................................................................................................
+class FileCheckerInterface {
+  checkFile() {
+    throw new Error("Метод checkFile не реализован");
+  }
+}
 class FileChecker {
   constructor(fileName, loginDivId, profileDivId) {
     this.fileName = "../account/data.json";
@@ -62,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
       this.imgMain.classList.add("img_intro-shadowBlack");
 
       this.DivMain.classList.remove("MainBackground");
-      this.DivMain.classList.remove("MainBackground-puple");
+      this.DivMain.classList.remove("MainBackground-purple");
       this.DivMain.classList.remove("MainBackground-green");
       this.DivMain.classList.add("MainBackground-black");
 
@@ -123,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
       this.imgMain.classList.add("img_intro-shadow");
 
       this.DivMain.classList.remove("MainBackground-black");
-      this.DivMain.classList.remove("MainBackground-puple");
+      this.DivMain.classList.remove("MainBackground-purple");
       this.DivMain.classList.remove("MainBackground-green");
       this.DivMain.classList.add("MainBackground");
 
@@ -205,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
       this.imgMain.classList.add("img_intro-Green");
 
       this.DivMain.classList.remove("MainBackground-black");
-      this.DivMain.classList.remove("MainBackground-puple");
+      this.DivMain.classList.remove("MainBackground-purple");
       this.DivMain.classList.remove("MainBackground");
       this.DivMain.classList.add("MainBackground-green");
 
