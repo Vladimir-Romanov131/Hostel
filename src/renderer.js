@@ -55,6 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Получаем данные, введенные пользователем
     const name = document.querySelector("#name-input").value;
+    const surname = document.querySelector("#surname-input").value;
+    const patronymic = document.querySelector("#patronymic-input").value;
     const email = document.querySelector("#email-input").value;
     const phone = document.querySelector("#phone-input").value;
     const password = document.querySelector("#password-input").value;
@@ -66,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const isValid = validateData(name, email, phone, password, confirmPassword);
     // Если данные прошли валидацию, сохраняем их в файл
     if (isValid) {
-      const data = { name, email, phone, password };
+      const data = { name, surname, patronymic, email, phone, password };
       saveToFile(data);
     }
   });

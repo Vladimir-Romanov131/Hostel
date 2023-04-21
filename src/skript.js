@@ -167,23 +167,23 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 //..........................................................................................................
 document.addEventListener("DOMContentLoaded", () => {
-  // Получаем ссылку на див #profile
-  const profileDiv = document.getElementById("profile");
+  // Получаем ссылки на параграфы
+  const nameParagraph = document.getElementById("nameP");
+  const surnameParagraph = document.getElementById("surnameP");
+  const patronymicParagraph = document.getElementById("patronymicP");
+  const emailParagraph = document.getElementById("emailP");
+  const phoneParagraph = document.getElementById("phoneP");
 
   // Загружаем файл data.json с помощью Fetch API
   fetch("../account/data.json")
     .then((response) => response.json())
     .then((data) => {
-      // Создаем HTML-разметку для отображения информации из файла
-      const html = `
-        <p>Имя: ${data.name}</p>
-        <p>Email: ${data.email}</p>
-        <p>Телефон: ${data.phone}</p>
-      `;
-      // Вставляем созданную HTML-разметку в див #profile
-      profileDiv.innerHTML = html;
-      // Показываем див #profile
-      profileDiv.style.display = "block";
+      // Вставляем данные из файла внутрь параграфов
+      nameParagraph.innerHTML += ` ${data.name}`;
+      surnameParagraph.innerHTML += ` ${data.surname}`;
+      patronymicParagraph.innerHTML += ` ${data.patronymic}`;
+      emailParagraph.innerHTML += ` ${data.email}`;
+      phoneParagraph.innerHTML += ` ${data.phone}`;
     })
     .catch((error) => {
       console.error("Ошибка загрузки файла data.json", error);
