@@ -8,6 +8,11 @@
     <script src="./skript.js"></script>
     <script src="./bundle.js"></script>
     <script src="./Textsize.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="./Reservation.js"></script>
+    <script type="module" src="./calendar.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
   </head>
   <body>
     <main>
@@ -159,13 +164,13 @@
             <div class="Main_intro"> 
               <div class="Block Room-Block">
                 <div class="Room-Position">
-                  <a href="">
+                  <a id="Classic" href="#">
                     <div >
                       <div class="Room_Block">
                         <img src="../img/Reservation/Classic.png" width="100%" alt="Номер Classic">
                         <div class="Reservation_txt">
                           <p>Номер Classic </p>
-                          <p>4500 RUB</p>
+                          <p class="price">4500 RUB</p>
                         </div>
                         <div class="Icon">
                           <img src="../img/Reservation/Icons/icons8-wi-fi-26.png" alt="">
@@ -257,6 +262,7 @@
         </div>
         <div id="Calendar" style="display: none">
           <p>Календарь</p>
+          <div id="calendar"></div>
         </div>
         <div id="Account" style="display: none">  
           <div id="Login">
@@ -302,14 +308,25 @@
               </div>
             </div>
             <div class="Block">
-              <div class="Main_intro--setting Block">
-              <p id="nameP"></p>
-              <p id="surnameP"></p>
-              <p id="patronymicP"></p>
-              <p id="emailP"></p>
-              <p id="phoneP"></p>
-              
-
+              <div class="introSetting-shadow introSetting-size">
+                <div class="Setting-Block Setting-Background">
+                  <img class="border-img" src="../img/icons8-male-user-100.png" width="20%" alt="">
+                  <h2 id="surnameP"></h2>
+                  <h2 id="nameP"></h2>
+                  <h2 id="patronymicP"></h2>
+                </div>
+                <div>
+                  <h4>Номер телефона:</h4>
+                </div>
+                <div class="AccountStyle">
+                  <p id="phoneP"></p>
+                </div>
+                <div>
+                  <h4>Электронная почта:</h4>
+                </div>
+                <div class="AccountStyle">
+                  <p id="emailP"></p>
+                </div>
               </div>
             </div>
           </div>
@@ -358,5 +375,4 @@
       </div>
     </main>
   </body>
-
 </html>
