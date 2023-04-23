@@ -5,14 +5,17 @@
     <title>Информационно-справочная система</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="../css/Style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
     <script src="./skript.js"></script>
     <script src="./bundle.js"></script>
     <script src="./Textsize.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="./Reservation.js"></script>
-    <script type="module" src="./calendar.js"></script>
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
+    <script src="./calendar.js"></script>
   </head>
   <body>
     <main>
@@ -181,7 +184,7 @@
                   </a>
                 </div>
                 <div class="Room-Position">
-                  <a href="">
+                  <a id="Twin" href="">
                     <div>
                       <div class="Room_Block">
                         <img src="../img/Reservation/Twin.png" width="100%" alt="Номер Twin">
@@ -198,7 +201,7 @@
                   </a>
                 </div>
                 <div class="Room-Position">
-                  <a href="">
+                  <a id="King" href="">
                     <div>
                       <div class="Room_Block">
                         <img src="../img/Reservation/King.png" width="100%" alt="Номер King">
@@ -217,7 +220,7 @@
                   </a>
                 </div>
                 <div class="Room-Position">
-                  <a href="">
+                  <a id="Business-Suite" href="">
                     <div>
                       <div class="Room_Block">
                         <img src="../img/Reservation/BS.png" width="100%" alt="Номер Business-Suite">
@@ -237,7 +240,7 @@
                   </a>
                 </div>
                 <div class="Room-Position">
-                  <a href="">
+                  <a id="Suite" href="">
                     <div >
                         <div class="Room_Block Room_style">
                           <img src="../img/Reservation/S.png" width="100%" alt="Номер Suite">
@@ -261,7 +264,11 @@
           </div>
         </div>
         <div id="Calendar" style="display: none">
-          <p>Календарь</p>
+          <div class="Maim-Home" >
+            <div class="MainFormStyle">
+              <h1>Календарь</h1> 
+            </div>
+          </div>
           <div id="calendar"></div>
         </div>
         <div id="Account" style="display: none">  

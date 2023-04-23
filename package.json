@@ -19,6 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "@fullcalendar/core": "^6.1.5",
+    "@fullcalendar/daygrid": "^6.1.5",
     "body-parser": "^1.20.2",
     "csv-writer": "^1.6.0",
     "electron-squirrel-startup": "^1.0.0",
@@ -26,7 +27,8 @@
     "flatpickr": "^4.6.13",
     "fs": "^0.0.1-security",
     "fullcalendar": "^6.1.5",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "preact": "^10.13.2"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.1.1",
