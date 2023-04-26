@@ -1,4 +1,4 @@
-// // Скрипт работы меню, активация дивов и скрытие....................................................................................
+// // Скрипт работы меню, активация дивов и скрытие..........................................
 class ToggleInterface {
   activate(element) {
     throw new Error("Метод activate не реализован");
@@ -19,7 +19,7 @@ class Toggle extends ToggleInterface {
   }
 }
 const toggle = new Toggle();
-// проверка на наличие аккаунта..........................................................................................................
+// проверка на наличие аккаунта..............................................................
 class FileChecker {
   constructor(fileName, loginDivId, profileDivId) {
     this.fileName = "../account/data.json";
@@ -41,12 +41,12 @@ class FileChecker {
       });
   }
 }
-// Ожидать загрузки страницы
+// Ожидать загрузки страницы.................................................................
 document.addEventListener("DOMContentLoaded", function (event) {
   const checker = new FileChecker("login.json", "Login", "profile");
   checker.checkFile();
 });
-//темная тема..........................................................................................................
+//темная тема................................................................................
 document.addEventListener("DOMContentLoaded", () => {
   class DarkMode {
     constructor() {
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     darkMode.setDarkMode();
   });
 });
-// светлая тема..........................................................................................................
+// светлая тема..............................................................................
 document.addEventListener("DOMContentLoaded", () => {
   class LightMode {
     constructor() {
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lightMode.setLightMode();
   });
 });
-//..........................................................................................................
+//Заполнение блока с данными пользователя....................................................
 document.addEventListener("DOMContentLoaded", () => {
   // Получаем ссылки на параграфы
   const nameParagraph = document.getElementById("nameP");
@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Ошибка загрузки файла data.json", error);
     });
 });
-//Зеленая тема..........................................................................................................
+//Зеленая тема...............................................................................
 document.addEventListener("DOMContentLoaded", () => {
   class GreenMode {
     constructor() {
@@ -251,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
     greenMode.setGreenMode();
   });
 });
-//Фиолетовый тема..........................................................................................................
+//Фиолетовый тема............................................................................
 document.addEventListener("DOMContentLoaded", () => {
   class PurpleMode {
     constructor() {

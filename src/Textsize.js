@@ -5,7 +5,6 @@ class FontSizeChanger {
     this.currentFontSize = parseInt(
       window.getComputedStyle(document.body, null).getPropertyValue("font-size")
     );
-
     document
       .getElementById("fontsize-decrease")
       .addEventListener("click", () => this.updateFontSize(-2));
